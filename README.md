@@ -18,9 +18,11 @@ This is a FastAPI application that accepts jobs, processes them in the backgroun
 ## Running it
 
 Build the image.
+
 docker build -t job-queue-demonstrator .
 
 Run it, linking the results folder so saved job files appear on your own machine too.
+
 docker run -p 8000:8000 -v "${PWD}/results:/app/results" job-queue-demonstrator
 
 Then visit `http://127.0.0.1:8000/docs` to submit jobs and check their status interactively.
